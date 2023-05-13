@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
 import CatForm from "../components/CatForm";
 import { Context as CatContext } from "../context/CatContext";

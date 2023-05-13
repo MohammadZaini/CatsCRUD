@@ -11,26 +11,24 @@ const ShowScreen = ({navigation}) => {
 
     return(
         <View style ={styles.container} >
-
-            <View style={{flexDirection: 'row'}} >
-                <MaterialCommunityIcons name="cat" size={30} color="blue" style={{marginLeft: 15, marginTop: 13}} />
+            <View style={styles.row} >
+                <MaterialCommunityIcons name="cat" size={30} color="blue" style={styles.icon} />
                 <Text style={styles.header} >Name</Text>
             </View>
             <Text style={styles.body} >{cat.name}</Text>
 
 
-            <View style={{flexDirection: 'row'}} >
-                <MaterialCommunityIcons name="chart-scatter-plot" size={30} color="blue"  style={{marginLeft: 15, marginTop: 13}}/>
+            <View style={styles.row} >
+                <MaterialCommunityIcons name="chart-scatter-plot" size={30} color="blue"  style={styles.icon}/>
                 <Text style={styles.header} >Breed</Text>
             </View>
             <Text style= {styles.body} >{cat.breed}</Text>
 
-            <View style={{flexDirection: 'row'}} >
-                <MaterialIcons name="description" size={30} color="blue" style={{marginLeft: 15, marginTop: 13}}/>
+            <View style={styles.row} >
+                <MaterialIcons name="description" size={30} color="blue" style={styles.icon}/>
                 <Text style={styles.header} >Description</Text>
             </View>
             <Text style= {styles.body}>{cat.description}</Text>
-
     </View>
 )};
 
@@ -42,10 +40,13 @@ ShowScreen.navigationOptions = ({navigation}) => {
                 <MaterialIcons name="edit" size={30} color="blue" />
             </TouchableOpacity>
         )
-    }
-}
+    };
+};
 
 const styles = StyleSheet.create({
+    container: {
+        marginTop: 15
+    },
     header: {
         margin: 15,
         fontWeight: 'bold',
@@ -60,8 +61,11 @@ const styles = StyleSheet.create({
         borderColor: 'grey',
         paddingLeft: 10,
     },
-    container: {
-        marginTop: 15
+    icon: {
+        marginLeft: 15, marginTop: 13
+    },
+    row: {
+        flexDirection: 'row'
     }
 });
 

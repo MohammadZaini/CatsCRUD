@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -11,7 +11,7 @@ const IndexScreen = ({navigation}) => {
     return <View>
         <FlatList
         data={state}
-        keyExtractor={ cat  => cat.id}
+        keyExtractor={ cat => cat.id}
         renderItem={({item}) => {
             return(
                 <TouchableOpacity onPress={() => {navigation.navigate('Show', {id: item.id})}} >
@@ -40,7 +40,7 @@ IndexScreen.navigationOptions = ({navigation}) => {
     return {
         title: 'Cats',
         headerRight: () => (
-            <TouchableOpacity onPress={() => navigation.navigate('Add')} >
+            <TouchableOpacity onPress={() => navigation.navigate('Add')}>
                 <MaterialIcons name="add" size={30} color="black" />
             </TouchableOpacity>)
     };
