@@ -19,7 +19,7 @@ const IndexScreen = ({navigation}) => {
                         <MaterialCommunityIcons name="cat" size={30} color="blue"/>
                         <Text style={{fontSize: 20}} >{item.name}</Text>
                         <TouchableOpacity onPress={() => {deleteCat(item.id)}} >
-                            <AntDesign name="delete" size={25} color="black" />
+                            <AntDesign name="delete" size={25} color="red" />
                         </TouchableOpacity>      
                     </View>
                 </TouchableOpacity>
@@ -41,7 +41,7 @@ IndexScreen.navigationOptions = ({navigation}) => {
         title: 'Cats',
         headerRight: () => (
             <TouchableOpacity onPress={() => navigation.navigate('Add')}>
-                <MaterialIcons name="add" size={30} color="black" />
+                <MaterialIcons name="add" size={30} color="blue" />
             </TouchableOpacity>)
     };
 };
